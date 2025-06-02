@@ -23,8 +23,8 @@ public class BookController {
 
   @GetMapping("/book-list")
   public ResponseEntity<Page<BookDTO>> getBookList(
-      @RequestParam(required = false, name = "title") @Pattern(regexp = "^[a-zA-Z0-9 :,.\\-?]+$", message = "Only alphanumeric characters and symbols (: , . - ?) are allowed") @Size(max = 100, message = "Title characters count could not be more than 100") String title,
-      @RequestParam(required = false, name = "author") @Pattern(regexp = "^[a-zA-Z0-9 ]+$", message = "Only alphanumeric characters are allowed") @Size(max = 100, message = "Author characters count could not be more than 100") String author,
+      @RequestParam(required = false, name = "title") @Pattern(regexp = "^$|^[a-zA-Z0-9 :,.\\-?]+$", message = "Only alphanumeric characters and symbols (: , . - ?) are allowed") @Size(max = 100, message = "Title characters count could not be more than 100") String title,
+      @RequestParam(required = false, name = "author") @Pattern(regexp = "$|^[a-zA-Z0-9 ]+$", message = "Only alphanumeric characters are allowed") @Size(max = 100, message = "Author characters count could not be more than 100") String author,
       @PageableDefault(sort = "title") Pageable pageable) {
     return ResponseEntity.ok().body(bookService.getBookList(title, author, pageable));
   }
