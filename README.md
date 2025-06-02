@@ -4,6 +4,11 @@ This project is to demonstrate the simple Library System
 Table of Content
 -----
 - [Overview](#overview)
+  - [Core Focus of System](#the-core-focus-of-this-system-is-on)
+  - [Project of Backend Project](#the-project-serves-as-a-backend-system-for)
+  - [Usefulness](#its-useful-for)
+  - [Key Goals](#key-goals)
+  - [Functionality](#functionality)
 - [Technology Stack](#technology-stack)
 - [Getting Started](#getting-started)
 - [API Endpoints](#api-endpoints)
@@ -55,7 +60,7 @@ This project is a Library System built with Spring Boot, Spring Data JPA, and Po
   - Update existing book records 
   - Filter/search books by:
     - Title (case-insensitive partial match)
-      Author (case-insensitive partial match)
+    - Author (case-insensitive partial match)
   - View paginated lists of books with optional sorting
 - **Borrower Management**
   - Create borrower records with name and email validation
