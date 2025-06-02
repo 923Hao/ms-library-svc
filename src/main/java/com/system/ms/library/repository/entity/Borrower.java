@@ -1,5 +1,6 @@
 package com.system.ms.library.repository.entity;
 
+import com.system.ms.library.model.enums.Status;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -19,4 +20,8 @@ public class Borrower {
 
   @Column(name = "email_address")
   private String emailAddress;
+
+  @Column(name = "status")
+  @Enumerated(EnumType.STRING)
+  private Status status;
 }
