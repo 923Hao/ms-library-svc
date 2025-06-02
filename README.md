@@ -400,12 +400,12 @@ curl --location 'http://localhost:8080/v1/borrower/borrow-book/ABC12345' \
 
 **Validation & Error Response**
 
-| HTTP Code | Reason                                                   | Example Message                                |
-|-----------|----------------------------------------------------------|------------------------------------------------|
-| `200`     | Gracefully handled on parameter values validation failed | `"Only alphanumeric characters are allowed"`   |
-| `200`     | Gracefully handled on availability validation            | `"No books available to borrow for this ISBN"` |
-| `200`     | Gracefully handled on existence validation               | `"Book not found"`                             |
-| `500`     | Internal server error                                    | `"Unexpected error occurred"`                  |
+| HTTP Code | Reason                                                   | Example Message                                              |
+|-----------|----------------------------------------------------------|--------------------------------------------------------------|
+| `200`     | Gracefully handled on parameter values validation failed | `"Only alphanumeric characters are allowed"`                 |
+| `200`     | Gracefully handled on availability validation            | `"No books available to borrow or deregister for this ISBN"` |
+| `200`     | Gracefully handled on existence validation               | `"Book not found"`                                           |
+| `500`     | Internal server error                                    | `"Unexpected error occurred"`                                |
 
 ---
 
